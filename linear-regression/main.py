@@ -9,7 +9,7 @@ import pickle
 from matplotlib import style
 
 # Read the data from the .csv file
-data = pd.read_csv('./student-mat.csv', sep=';')
+data = pd.read_csv('student-mat.csv', sep=';')
 
 # Select the features (properties) we want to use for our model
 data = data[['G1', 'G2', 'G3', 'studytime', 'failures', 'absences']]
@@ -47,7 +47,7 @@ for __ in range(1000):
         best = acc
         with open('student_model.pickle', 'wb') as f:
             pickle.dump(model, f)
-
++
 print(best)
 
 """
